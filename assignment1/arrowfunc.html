@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+    <body>        
+        <div style="text-align: center;" id="container"><h1 >
+                 Sample Login page 
+                 <br>
+                <label style="font-size:large"> Enter First Name:</label><input type="text" id="firstName">
+                <br>
+                <label style="font-size:large"> Enter Last Name:</label><input type="text" id="lastName">
+                <br>
+                 <button id="clicked" onclick="NameFunction()" >click here</button>
+           <p id="result"></p>
+        </h1>
+        </div>
+    </body>
+    <script>
+        // arrow funtion with two firstname and lastname arguments
+      
+      function NameFunction()
+      {
+       var firstName = document.getElementById('firstName').value;
+       var  lastName = document.getElementById('lastName').value;
+
+      var shortName = (firstName,lastName) => {
+          return firstName.charAt(0)+lastName.charAt(0);
+        } 
+         
+       console.log( shortName(firstName,lastName));
+       var re=shortName(firstName,lastName);
+      document.getElementById('result').innerText=re;
+      }
+        </script>
+</html>
