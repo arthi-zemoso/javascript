@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storage</title>
+</head>
+<h1>Storage</h1>
+<body style="text-align:center">
+    <label>local Score:</label><input id="lstorage">
+    <br><br>
+    <label>session Score</label><input id="sstorage">
+    <br><br>
+    <button id="button">click here to increase count</button>
+    <script>
+         localStorage.setItem("localScore",0);
+        sessionStorage.setItem("sessionScore",0);
+        var count=0;
+        button.onclick=function() {
+           count=parseInt(localStorage.getItem("localScore"),10);
+           count=count+1;
+           localStorage.setItem("localScore",count);
+           sessionStorage.setItem("sessionScore",count);
+           document.getElementById("lstorage").value = count;
+           document.getElementById("sstorage").value = count; 
+    }
+    
+    </script>
+</body>
+</html>
