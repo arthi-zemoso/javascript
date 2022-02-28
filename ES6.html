@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6 assignment</title>
+</head>
+<body>
+    <Script>
+        
+/*Refactor the following function into a one-liner:
+const printName = (name) => {
+                     return “Hi” + name;
+         }
+         */
+     
+    const printName= (name) => 'Hi '+name;
+    console.log(printName("Arthi"));
+
+/*Rewrite the following code using template literals
+ const printBill = (name, bill) => {
+                     return “Hi “ + name + “, please pay: “ + bill;
+           }*/
+
+          const printBill=(name,bill) => {return `Hi ${name}, please pay: ${bill}`};
+
+            console.log(printBill("Arthi",1000));
+
+/*Modify the following code such that the object properties are destructured and logged.
+ const person = {
+                       name: “Noam Chomsky”,
+                      age: 92
+            }
+           
+            let name = person.name;
+           let age = person.age;
+           console.log(name);
+            console.log(age); 
+            */
+
+    const person={
+    Name:"Noam Chomsky",
+    age:92
+   }
+   const {Name,age} = person;
+   console.log(Name);
+   console.log(age);
+
+    </Script>
+</body>
+</html>
